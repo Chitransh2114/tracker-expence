@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+    background-attachment: fixed;
+    color: #000000; /* black */
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Custom scrollbar styling (Snappy & Minimalist) */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1; /* slate-300 */
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8; /* slate-400 */
+}
+
+/* Professional SaaS structured panels */
+.glass-panel {
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  box-shadow: 0 8px 32px 0 rgba(148, 163, 184, 0.08);
+}
+
+.glass-panel-hover {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-hover:hover {
+  border-color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 8px 32px 0 rgba(148, 163, 184, 0.15);
+}
+
+.glow-btn {
+  transition: all 0.15s ease-in-out;
+}
+
+.glow-btn:hover {
+  transform: translateY(-1px);
+}
+
+.glow-btn:active {
+  transform: translateY(0);
+}
+
+/* Hide spin-buttons for input[type="number"] */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+/* Chrome/Safari Autofill background & text color override */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px #f8fafc inset !important;
+  -webkit-text-fill-color: #0f172a !important;
+  box-shadow: 0 0 0 1000px #f8fafc inset !important;
+  text-fill-color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
