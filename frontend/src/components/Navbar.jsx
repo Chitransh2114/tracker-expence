@@ -1,9 +1,16 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { Wallet, LogOut } from 'lucide-react';
 
 const Navbar = () => {
   const { user, logout } = useAuth();
+  const navigate = useNavigate();
+
+  const handleLogout = async () => {
+    await logout();
+    navigate('/login', { replace: true });
+  };
 
   // Helper to extract first and last initials
   const getInitials = (name) => {
@@ -56,7 +63,7 @@ const Navbar = () => {
               </div>
 
               <button
-                onClick={logout}
+                onClick={handleLogout}
                 className="flex items-center gap-2 text-xs font-semibold text-slate-600 hover:text-rose-600 transition-colors py-2 px-3 hover:bg-slate-200/50 rounded-lg"
               >
                 <LogOut className="h-3.5 w-3.5" />
