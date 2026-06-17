@@ -96,13 +96,13 @@ VITE_API_URL = https://tracker-expense-api.onrender.com/api
 ### 3.4 Environment Variables add करो:
 
 ```
-MONGODB_URI = mongodb+srv://chitranshdwivedi063_db_user:chitranshdwivedi063_db_user@cluster0.vm25bni.mongodb.net/expense_tracker?retryWrites=true&w=majority
+MONGODB_URI = your_mongodb_connection_string
 
-JWT_SECRET = super_secret_session_key_987654
+JWT_SECRET = your_jwt_secret_key
 
-MAIL_USER = dwivedichitransh020@gmail.com
+MAIL_USER = your_email_address@gmail.com
 
-MAIL_PASS = xpbzsttsuaapzqgn
+MAIL_PASS = your_email_app_password
 
 NODE_ENV = production
 
