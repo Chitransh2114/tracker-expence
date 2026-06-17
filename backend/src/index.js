@@ -12,7 +12,7 @@ const app = express();
 // Dynamically read CORS_ORIGIN from .env
 const allowedOrigins = process.env.CORS_ORIGIN
   ? process.env.CORS_ORIGIN.split(',').map(origin => origin.trim())
-  : ['http://localhost:3000', 'http://localhost:5173'];
+  : ['http://localhost:3000', 'http://localhost:5173', 'https://tracker-expence.vercel.app'];
 
 // Middleware
 app.use(cors({
